@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>浪漫表白</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: url('background.jpg') no-repeat center center fixed;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: 'Arial', sans-serif;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        .confession {
+            text-align: center;
+            font-size: 2em;
+            line-height: 1.4;
+        }
+        .heart-button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #ff69b4;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            text-transform: uppercase;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        .heart-button:hover {
+            background-color: #e64c65;
+            transform: scale(1.05);
+        }
+        .heart-button:active {
+            transform: scale(0.95);
+        }
+    </style>
+</head>
+<body>
+    <div class="confession">
+        <p>亲爱的[TA的名字],</p>
+        <p>在这个特别的日子里，我想告诉你...</p>
+        <p>你是我生命中最美好的奇迹，</p>
+        <p>每一次想到你，我的心就充满了温暖和喜悦。</p>
+        <p>我想要和你一起分享每一个日出和日落，</p>
+        <p>一起走过未来的每一天。</p>
+        <button class="heart-button" onclick="showLove()">我❤️你！</button>
+    </div>
+
+    <script>
+        function showLove() {
+            alert("我愿意！"); // 这里可以根据需要修改弹窗内容或添加更多交互效果
+        }
+    </script>
+</body>
+</html>
