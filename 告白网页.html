@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8"> <!-- 指定字符编码 -->
+    <title>浪漫告白</title> <!-- 网页标题 -->
+    <style>
+        /* CSS样式开始 */
+        body {
+            margin: 0; /* 去除外边距 */
+            padding: 0; /* 去除内边距 */
+            overflow: hidden; /* 隐藏溢出内容 */
+            font-family: Arial, sans-serif; /* 设置字体 */
+        }
+        video {
+            width: 100%; /* 视频宽度占满容器 */
+            height: auto; /* 高度自适应 */
+            position: absolute; /* 绝对定位 */
+            left: 0; /* 左边缘对齐容器 */
+            top: 0; /* 上边缘对齐容器 */
+            z-index: -1; /* 设置层级，确保视频在背景 */
+        }
+        .confession {
+            position: relative; /* 相对定位 */
+            text-align: center; /* 文本居中 */
+            padding: 50px; /* 内边距 */
+            color: white; /* 文字颜色 */
+            mix-blend-mode: screen; /* 混合模式，使文字在视频上更明显 */
+        }
+        .heart-icon {
+            font-size: 4em; /* 字体大小 */
+            color: #ff69b4; /* 颜色 */
+            animation: pulse 2s infinite; /* 动画效果：脉冲，持续2秒，无限循环 */
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); } /* 动画开始时，缩放比例1 */
+            50% { transform: scale(1.2); } /* 动画中间点，缩放比例1.2 */
+            100% { transform: scale(1); } /* 动画结束时，缩放比例1 */
+        }
+        .agree-button {
+            display: block; /* 块级元素 */
+            margin-top: 20px; /* 上边距 */
+            padding: 10px 20px; /* 内边距 */
+            background-color: #ff69b4; /* 背景颜色 */
+            color: white; /* 文字颜色 */
+            border: none; /* 无边框 */
+            border-radius: 5px; /* 圆角 */
+            cursor: pointer; /* 鼠标悬停时显示手型 */
+            font-size: 1em; /* 字体大小 */
+            text-transform: uppercase; /* 文字转换为大写 */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* 阴影效果 */
+            transition: background-color 0.3s ease, transform 0.3s ease; /* 过渡效果 */
+        }
+        .agree-button:hover {
+            background-color: #e64c65; /* 悬停时背景颜色变化 */
+            transform: scale(1.05); /* 悬停时放大 */
+        }
+        .agree-button:active {
+            transform: scale(0.95); /* 点击时缩小 */
+        }
+        /* CSS样式结束 */
+    </style>
+</head>
+<body>
+    <!-- 背景视频开始 -->
+    <video autoplay muted loop id="bg-video">
+        <source src="background-video.mp4" type="video/mp4">
+        您的浏览器不支持 HTML5 视频。
+    </video>
+    <!-- 背景视频结束 -->
+    <!-- 背景音乐开始 -->
+    <audio id="bg-music" preload="auto" autoplay loop>
+        <source src="background-music.mp3" type="audio/mpeg">
+        您的浏览器不支持音频播放。
+    </audio>
+    <!-- 背景音乐结束 -->
+    <div class="confession">
+        <h1><span class="heart-icon">❤️</span> 亲爱的[TA的名字],</h1>
+        <p>在这个特别的日子里，我想告诉你...</p>
+        <p>你是我生命中最美好的奇迹，</p>
+        <p>每一次想到你，我的心就充满了温暖和喜悦。</p>
+        <p>我想要和你一起分享每一个日出和日落，</p>
+        <p>一起走过未来的每一天。</p>
+        <button class="agree-button" onclick="showLove()">我❤️你！</button>
+    </div>
+
+    <script>
